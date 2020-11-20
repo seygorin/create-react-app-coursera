@@ -50,17 +50,12 @@ import {Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
     }
 
     const DishDetail = (props) => {
-        if (props.dish) {
-            
-            const dish = props.dish;
-            const dishDetail = RenderDish(dish);
-			const dishcomments = RenderComments(dish.comments);
-			
+        if (props.dish != null) {
             return (
                 <div class="container">
                 <div className="row">
-                    {dishDetail}
-                    {dishcomments}
+                    <RenderDish dish={props.dish} />
+                    <RenderComments comments={props.dish.comments} />
                 </div>
                 </div>
             );
