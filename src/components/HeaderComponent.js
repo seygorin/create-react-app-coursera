@@ -55,7 +55,7 @@ class Header extends Component {
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
                                 <h1>Ristorante Con Fusion</h1>
-                                <p>We take inspiration from the World's best somthing!</p>
+                                <p>We take inspiration from the World's best something!</p>
                             </div>
                         </div>
                     </div> 
