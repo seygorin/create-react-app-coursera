@@ -103,8 +103,8 @@ class Header extends Component {
                     </ModalBody>
                 </Modal>
             </>
-        )
+        ) 
     }
 }
 
-export default Header;
+export default Header;  
