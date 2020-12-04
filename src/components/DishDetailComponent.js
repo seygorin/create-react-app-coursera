@@ -26,8 +26,8 @@ class CommentForm extends Component {
       }
 
       handleSubmit(values) {
-        console.log('Oops ' + JSON.stringify(values));
-        alert('Oops ' + JSON.stringify(values));
+        this.toggleModal();
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment)
     }
 
       render() {
@@ -116,7 +116,7 @@ class CommentForm extends Component {
         );
     }
 
-    function RenderComments({comments}) {
+    function RenderComments({comments, addComment, dishId}) {
         if(comments == null){
             return(<div></div>);
         }
@@ -141,7 +141,7 @@ class CommentForm extends Component {
                 <h4> Comments </h4>
                 <ul className='list-unstyled'>
                     {showcmnts}
-                    <CommentForm />
+                    <CommentForm dishId={dishId} addComment={addComment} />
                 </ul>
             </div>
         );
@@ -167,7 +167,9 @@ class CommentForm extends Component {
                 <div className="row">
                     <RenderDish dish={props.dish} />
                     <RenderComments 
-                    comments={props.comments} />
+                    comments={props.comments}
+                    addComment={props.addComment}
+                    dishId={props.dish.id} />
                 </div>
                 </div>
             );
