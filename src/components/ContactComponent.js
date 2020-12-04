@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
@@ -109,7 +110,7 @@ class Contact extends Component {
                                         messages={{
                                             required: 'Required',
                                             minLength: 'Must be greater than 2 characters',
-                                            maxLength: 'Must be 15 characters on less'
+                                            maxLength: 'Must be 15 characters or less'
                                         }}
                                     />
                                 </Col>
